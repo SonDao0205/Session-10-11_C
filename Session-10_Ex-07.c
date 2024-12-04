@@ -16,12 +16,12 @@ int main() {
     for (int i = 0; i < m * n - 1; i++) {
         for (int j = 0; j < m * n - i - 1; j++) {
             int row = j / n;
-            int column = j % n;
+            int col = j % n;
             int nextRow = (j + 1) / n;
             int nextCol = (j + 1) % n;
-            if (arr[row][column] > arr[nextRow][nextCol]) {
-                int temp = arr[row][column];
-                arr[row][column] = arr[nextRow][nextCol];
+            if (arr[row][col] > arr[nextRow][nextCol]) {
+                int temp = arr[row][col];
+                arr[row][col] = arr[nextRow][nextCol];
                 arr[nextRow][nextCol] = temp;
             }
         }
