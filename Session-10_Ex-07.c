@@ -13,18 +13,19 @@ int main() {
             scanf("%d", &arr[i][j]);
         }
     }
-    for (int i = 0; i < m * n - 1; i++) {
-        for (int j = 0; j < m * n - i - 1; j++) {
-            int row = j / n;
-            int col = j % n;
-            int nextRow = (j + 1) / n;
-            int nextCol = (j + 1) % n;
-            if (arr[row][col] > arr[nextRow][nextCol]) {
-                int temp = arr[row][col];
-                arr[row][col] = arr[nextRow][nextCol];
-                arr[nextRow][nextCol] = temp;
+    for (int i = 0; i < m; i++)
+    {
+        for (int j = 0; j < n-1; j++)
+        {
+            if (arr[i][j] > arr[i][j+1])
+            {
+                int temp = arr[i][j];
+                arr[i][j] = arr[i][j+1];
+                arr[i][j+1] = temp;
             }
+            
         }
+        
     }
     printf("\nMang sau khi sap xep:\n");
     for (int i = 0; i < m; i++) {
