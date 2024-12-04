@@ -12,14 +12,15 @@ int main(){
             scanf("%d", &arr[i][j]);
         }
     }
-    for (int col = 0; col < n; col++) { 
-        for (int i = 0; i < m - 1; i++) {
-            for (int j = 0; j < m - i - 1; j++) {
-                if (arr[j][col] > arr[j + 1][col]){
-                    int temp = arr[j][col];
-                    arr[j][col] = arr[j + 1][col];
-                    arr[j + 1][col] = temp;
-                }
+    for (int i = 0; i < m-1; i++)
+    {
+        for (int j = 0; j < n-1; j++)
+        {
+            if (arr[j][i] > arr[j+1][i])
+            {
+                int temp = arr[j][i];
+                arr[j][i] = arr[j+1][i];
+                arr[j+1][i] = temp;
             }
         }
     }
