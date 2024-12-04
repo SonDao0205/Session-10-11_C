@@ -37,7 +37,7 @@ int main(){
                 }   
             }   
         }
-        printf("Mang duoc sap xep theo duong cheo chinh : \n");
+        printf("Mang duoc sap xep tang dan theo duong cheo chinh : \n");
         for (int i = 0; i < m; i++)
         {
             for (int j = 0; j < n; j++)
